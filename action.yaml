@@ -228,8 +228,8 @@ runs:
           }
 
           if ("${{ inputs.x86 }}" -like "true"){
-            Write-Output ("Invoking " + $command + ' /base "'+$x64BasePath+'"' + " /out $cwd\${{ inputs.out }}\" + $fileNameWithoutExtension + "${{ inputs.x86_suffix }}.exe")
-            Invoke-Expression ($command + ' /base "'+$x64BasePath+'"' + " /out $cwd\${{ inputs.out }}\" + $fileNameWithoutExtension + "${{ inputs.x86_suffix }}.exe")
+            Write-Output ("Invoking " + $command + ' /base "'+$x86BasePath+'"' + " /out $cwd\${{ inputs.out }}\" + $fileNameWithoutExtension + "${{ inputs.x86_suffix }}.exe")
+            Invoke-Expression ($command + ' /base "'+$x86BasePath+'"' + " /out $cwd\${{ inputs.out }}\" + $fileNameWithoutExtension + "${{ inputs.x86_suffix }}.exe")
           }
         }
 
