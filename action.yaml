@@ -126,6 +126,7 @@ runs:
           # Incompatible version
           throw "Incompatible version ${{ inputs.version }} of AHK!"
         }
+        Wait-Process -Name installer
 
         Write-Output "AHK ${{ inputs.version }} installation completed! Ready to build!"
     - name: Build
